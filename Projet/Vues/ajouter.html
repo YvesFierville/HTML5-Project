@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Projet</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="../css/style.css">
+  <!--[if lt IE 9]>
+    <script>
+      document.createElement('nav');
+    </script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!-- En tête de la page -->
+    <header>
+        <h1>Rassemble tes Streams</h1>
+    </header>
+        <!-- Menu provenance GitUb https://github.com/catalinred/Animenu -->
+    <!-- lien de navigation -->
+    <nav class="animenu"> 
+        <button class="animenu__toggle">
+            <span class="animenu__toggle__bar"></span>
+            <span class="animenu__toggle__bar"></span>
+            <span class="animenu__toggle__bar"></span>
+        </button>
+        <ul class="animenu__nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="mosaique.html">Mosaïque</a>
+            </li> 
+            <li>
+              <a href="#">Ajouter</a>
+            </li>     
+            <li>
+              <a href="#">Categories</a>
+              <ul class="animenu__nav__child">
+                <li><a href="">Sub Item 1</a></li>
+                <li><a href="">Sub Item 2</a></li>
+                <li><a href="">Sub Item 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>                 
+        </ul>
+    </nav>
+    <section> 
+        <!-- Champ pour saisir le lien du stream à ajouter -->
+        <input name="add-stream" id="add-stream" type="text" placeholder="Lien du stream">
+        <input type="button" class="myButton" onclick='addStream()' value='Ajouter'/>
+        <!-- Affichage du stream ajouter -->
+        <div id="stream"></div>
+    </section>    
+      
+    <!-- Pied de page -->
+    <footer>
+        <h2>Dévellopé par Yves Fierville</h2>
+    </footer>
+    
+</body>
+</html>
+    <!-- Les scripts -->
+<script src="js/animenu.js"></script>
+
+<script>
+function addStream()
+{
+    var frame=document.createElement("iframe"); // Créer un objet iframe pour lire le flux vidéo
+    frame.setAttribute('src', document.getElementById("add-stream").value); //On ouvre le flux sur le lien rentré par l'utilisateur
+    frame.setAttribute('frameborder',"0");
+    frame.setAttribute('width',"960");
+    frame.setAttribute('height',"540");
+    frame.setAttribute('allowfullscreen',"");
+    
+    /* Boutton pour ajouter le stream au favoris, à la liste de stream enregistré */
+    var btn_add=document.createElement("input"); 
+    btn_add.setAttribute("type","button");
+    btn_add.setAttribute("class","myButton");
+    
+    var el = document.getElementById("stream");
+    el.appendChild(frame); // On lie l'objet iFrame à la div "stream"
+    el.appendChild(btn_add);
+}
+</script>

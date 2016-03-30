@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Projet</title>
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="../css/style.css">
+  <!--[if lt IE 9]>
+    <script>
+      document.createElement('nav');
+    </script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!-- En tête de la page -->
+    <header>
+        <h1>Rassemble tes Streams</h1>
+    </header>
+        <!-- Menu provenance GitUb https://github.com/catalinred/Animenu -->
+    <!-- lien de navigation -->
+    <nav class="animenu"> 
+        <button class="animenu__toggle">
+            <span class="animenu__toggle__bar"></span>
+            <span class="animenu__toggle__bar"></span>
+            <span class="animenu__toggle__bar"></span>
+        </button>
+        <ul class="animenu__nav">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">Mosaïque</a>
+            </li>
+            <li>
+              <a href="ajouter.html">Ajouter</a>
+            </li>
+            <li>
+              <a href="#">Categories</a>
+              <ul class="animenu__nav__child">
+                <li><a href="">Sub Item 1</a></li>
+                <li><a href="">Sub Item 2</a></li>
+                <li><a href="">Sub Item 3</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>                 
+        </ul>
+    </nav>
+        
+        <!-- Affiche un stream Twitch -->
+        <iframe src='http://player.twitch.tv/?channel=OgamingLoL' frameborder="0" width='960' height='540' allowfullscreen></iframe>
+        
+        <!-- Affiche un stream Azubu -->
+        <iframe src="http://embed.azubu.tv/axt" frameborder="0" width='960' height='540' allowfullscreen ></iframe>
+
+        <!-- Affiche un stream youtube -->
+        <iframe src="https://www.youtube.com/embed/fa7SmtKAhwI" frameborder="0" width='960' height='540' allowfullscreen ></iframe>
+        
+        <!-- Peu importe l'origine du flux l'intégration ce fait de la même façon -->
+        
+
+      
+    <!-- Pied de page -->
+    <footer>
+        <h2>Dévellopé par Yves Fierville</h2>
+    </footer>
+</body>
+    
+</html>
+
+<!-- Les scripts -->
+<script src="js/animenu.js"></script>
